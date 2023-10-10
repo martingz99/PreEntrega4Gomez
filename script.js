@@ -47,24 +47,22 @@ if (pass()) {
     }
     alert(cursosInfo);
     let cantidadCursos = parseInt(prompt('¿Cuántos cursos quieres comprar?'));
+    //utilice las funcion isNaN porque si pongo la linea de codigo sin ella cuando llego a esta parte del codigo y en cursos pongo la letra "a o cualquiera" me lo toma como valido y prefiero evitarlo y que solamente acepte numeros y tire error si ponen letras
     if (isNaN(cantidadCursos) || cantidadCursos <= 0) {
         alert('Por favor, ingresa un número válido y mayor a cero.');
     } else {
-                let precioTotal = 0;
-        let i = 0;
-
-        while (i < cantidadCursos) {
-            let seleccionCurso = parseInt(prompt('Elige el número del curso en el que quieres participar:'));
-
-            if (seleccionCurso >= 1 && seleccionCurso <= cursos.length) {
-                precioTotal += cursos[seleccionCurso - 1].precio;
-                i++;
-            } else {
-                alert('Selección no válida.');
+            let precioTotal = 0;
+            let i = 0;
+            while (i < cantidadCursos) {
+                let seleccionCurso = parseInt(prompt('Elige el número del curso en el que quieres participar:'));
+                if (seleccionCurso >= 1 && seleccionCurso <= cursos.length) {
+                    precioTotal += cursos[seleccionCurso - 1].precio;
+                    i++;
+                } else {
+                    alert('Selección no válida.');
+                }
             }
-        }
-
-        alert(`El precio total de tus cursos es: ${precioTotal} Pesos. ¡Gracias por tu compra!`);
+            alert(`El precio total de tus cursos es: ${precioTotal} Pesos. ¡Gracias por tu compra!`);
         }
 } else {
     alert('No cumpliste con el requisito mínimo, adiós.');
