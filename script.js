@@ -1,6 +1,6 @@
 let savedEdad = 18;
 
-alert('Hola, necesitas más de 18 años para poder ingresar.');
+alert('Hola, necesitas más de 17 años para poder ingresar.');
 
 function pass() {
     let ingresar = false;
@@ -21,12 +21,12 @@ function pass() {
 if (pass()) {
     let nombre = prompt('Bienvenido, ingresa tu nombre.');
     alert('Bienvenido/a, ' + nombre + ' a nuestra página.');
-    let cursos = [
+    let cursos = [ //pienso agregar mas cursos
         {
             nombre: "Preparación Física Avanzada",
             duracion: "10 semanas",
             nivel: "Avanzado",
-            precio:15000
+            precio: 15000
         },
         {
             nombre: "Entrenamiento Cardiovascular",
@@ -41,6 +41,9 @@ if (pass()) {
             precio: 10000
         }
     ];
+
+    let cursosSeleccionados = []; //array donde se enviarian los cursos elegidos
+
     let cursosInfo = 'Cursos Disponibles:\n';
     for (let i = 0; i < cursos.length; i++) {
         cursosInfo += `${i + 1}. ${cursos[i].nombre} - Duración: ${cursos[i].duracion} - Nivel: ${cursos[i].nivel} - Precio: ${cursos[i].precio} Pesos\n`;
@@ -51,19 +54,23 @@ if (pass()) {
     if (isNaN(cantidadCursos) || cantidadCursos <= 0) {
         alert('Por favor, ingresa un número válido y mayor a cero.');
     } else {
-            let precioTotal = 0;
-            let i = 0;
-            while (i < cantidadCursos) {
-                let seleccionCurso = parseInt(prompt('Elige el número del curso en el que quieres participar:'));
-                if (seleccionCurso >= 1 && seleccionCurso <= cursos.length) {
-                    precioTotal += cursos[seleccionCurso - 1].precio;
-                    i++;
-                } else {
-                    alert('Selección no válida.');
-                }
+        let precioTotal = 0;
+        let i = 0;
+
+        while (i < cantidadCursos) {
+            let seleccionCurso = parseInt(prompt('Elige el número del curso en el que quieres participar:'));
+
+            if (seleccionCurso >= 1 && seleccionCurso <= cursos.length) {
+                cursosSeleccionados.push(cursos[seleccionCurso - 1]);
+                precioTotal += cursos[seleccionCurso - 1].precio;
+                i++;
+            } else {
+                alert('Selección no válida.');
             }
-            alert(`El precio total de tus cursos es: ${precioTotal} Pesos. ¡Gracias por tu compra!`);
         }
+
+        alert(`Has seleccionado los siguientes cursos:\n${cursosSeleccionados.map(curso => curso.nombre).join('\n')}\nEl precio total de tus cursos es: ${precioTotal} Pesos. ¡Gracias por tu compra!`);
+    }
 } else {
     alert('No cumpliste con el requisito mínimo, adiós.');
 }
