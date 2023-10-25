@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <h1>Bienvenido al Carrito de Compras</h1>
+    </div>
+    <div>
+        <p>Por favor, introduce tu nombre:</p>
+    </div>
+    <div>
+        <input placeholder="Nombre" id="nombreInput" class="input" name="text" type="text">
+        <button onclick="guardarNombre()">Guardar Nombre</button>
+    </div>
+    <div>
+        <p id="mensaje-bienvenida"></p>
+    </div>
+
+    <div>
+        <div id="cursos-container"></div>
+        <h2>Tu Carrito de Compras</h2>
+        <ul id="carrito-list"></ul>
+        <p>Total: <span id="total"></span></p>
+        <button id="mostrar-cursos-comprados">Mostrar Cursos Comprados</button>
+        <div id="cursos-comprados"></div>
+        <div>
+            <p>Gracias por comprar!Vuelva Prontos!</p>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
