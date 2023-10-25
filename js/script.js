@@ -1,3 +1,4 @@
+// Array de los cursos
 const cursos = [
     {
         id: 0,
@@ -94,14 +95,14 @@ const cursos = [
 ];
 
 
-
+//carrito vacio
 const carritoCursos = [];
 
 const cursosContainer = document.getElementById('cursos-container');
         const carritoList = document.getElementById('carrito-list');
         const totalElement = document.getElementById('total');
         const nombreInput = document.getElementById('nombreInput');
-
+//JSON y DOM
         function mostrarCursos() {
             cursosContainer.innerHTML = '';
             cursos.forEach(curso => {
@@ -120,7 +121,7 @@ const cursosContainer = document.getElementById('cursos-container');
             const mostrarCursosCompradosButton = document.querySelector('button#mostrar-cursos-comprados');
             mostrarCursosCompradosButton.addEventListener('click', mostrarCursosComprados);
         }
-
+//agregar al carrito
         function agregarAlCarrito(cursoId) {
             const curso = cursos.find(curso => curso.id === cursoId);
             if (curso && !carritoCursos.includes(curso)) {
@@ -136,7 +137,7 @@ const cursosContainer = document.getElementById('cursos-container');
                 actualizarCarrito();
             }
         }
-
+//actualizacion de carrito
         function actualizarCarrito() {
             carritoList.innerHTML = '';
             let total = 0;
@@ -175,7 +176,7 @@ const cursosContainer = document.getElementById('cursos-container');
                 cursosCompradosContainer.appendChild(totalElement);
             }
         }
-
+//localStorage
         function guardarNombre() {
             const nombre = nombreInput.value;
             if (nombre) {
