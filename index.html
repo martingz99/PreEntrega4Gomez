@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="stylesheet" href="./css/estilos.css">
     <title>Carrito de compras de GymFit</title>
 </head>
@@ -18,9 +20,12 @@
         <button onclick="guardarNombre()">Guardar Nombre</button>
     </div>
     <div>
+        <input placeholder="Buscar cursos" id="busquedaInput" class="input" name="text" type="text" oninput="buscarCursos()">
+    </div>
+    <div>
         <p id="mensaje-bienvenida"></p>
     </div>
-
+    
     <div>
         <div id="cursos-container"></div>
         <h2>Tu Carrito de Compras</h2>
@@ -29,7 +34,7 @@
         <button id="mostrar-cursos-comprados">Mostrar Cursos Comprados</button>
         <div id="cursos-comprados"></div>
         <div>
-            <p>Gracias por comprar!Vuelva Prontos!</p>
+            <p>Gracias por comprar! Vuelva Prontos!</p>
         </div>
     </div>
     <script src="./js/script.js"></script>
