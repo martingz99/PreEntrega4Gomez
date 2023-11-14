@@ -8,13 +8,6 @@ const cursos = [
         precio: "45usd"
     },
     {
-        id: 20,
-        nombre: "Preparación Física Adolescentes",
-        duracion: "10 semanas",
-        nivel: "Intermedio",
-        precio: "50usd"
-    },
-    {
         id: 1,
         nombre: "Entrenamiento Cardiovascular ",
         duracion: "8 semanas",
@@ -34,13 +27,6 @@ const cursos = [
         duracion: "8 semanas",
         nivel: "Principiante",
         precio: "100usd"
-    },
-    {
-        id: 12,
-        nombre: "Funcional para gente adulta",
-        duracion: "12 semanas",
-        nivel: "Intermedio",
-        precio: "130usd"
     },
     {
         id: 4,
@@ -79,11 +65,65 @@ const cursos = [
         duracion: "6 semanas",
         nivel: "Principiante",
         precio: "110usd"
-    }
+    },
+    {
+        id: 10,
+        nombre: "Funcional para gente adulta",
+        duracion: "12 semanas",
+        nivel: "Intermedio",
+        precio: "130usd"
+    },
+    {
+        id: 11,
+        nombre: "Preparación Física Adolescentes",
+        duracion: "10 semanas",
+        nivel: "Intermedio",
+        precio: "50usd"
+    },
 ];
 
 const carritoCursos = [];
 const cursosCompradosKey = 'cursosComprados';
+
+// Agregar un evento para buscar cursos cuando se presione una tecla en el campo de búsqueda
+document.getElementById('busquedaInput').addEventListener('keyup', buscarCursosPorNombre);
+
+function buscarCursosPorNombre() {
+    const busquedaInput = document.getElementById('busquedaInput');
+    const criterioBusqueda = busquedaInput.value.toLowerCase();
+    
+    // Hacer una solicitud Fetch al archivo JSON local
+    fetch('js/cursos.json') // Reemplaza 'ruta/al/archivo/json.json' con la ruta correcta de tu archivo JSON
+        .then(response => response.json())
+        .then(data => {
+            // Filtrar los cursos según el criterio de búsqueda
+            const cursosFiltrados = data.filter(curso => curso.nombre.toLowerCase().includes(criterioBusqueda));
+            
+            // Mostrar los cursos filtrados en la interfaz
+            mostrarCursosFiltrados(cursosFiltrados);
+        })
+        .catch(error => {
+            console.error('Error al obtener los datos:', error);
+        });
+}
+
+function mostrarCursosFiltrados(cursos) {
+    const cursosContainer = document.getElementById('cursos-container');
+    cursosContainer.innerHTML = ''; // Limpiar el contenedor de cursos antes de mostrar los nuevos cursos filtrados
+    
+    cursos.forEach(curso => {
+        const cursoCard = document.createElement('div');
+        cursoCard.classList.add('card');
+        cursoCard.innerHTML = `
+            <h2>${curso.nombre}</h2>
+            <p>Precio: ${curso.precio}</p>
+            <p class="description">${curso.nivel}</p>
+            <p class="description">${curso.duracion}</p>
+            <button onclick="agregarAlCarrito(${curso.id})">Añadir al carrito</button>
+        `;
+        cursosContainer.appendChild(cursoCard);
+    });
+}
 
 const cursosContainer = document.getElementById('cursos-container');
 const carritoList = document.getElementById('carrito-list');
@@ -305,3 +345,4 @@ if (nombreGuardado) {
 
 mostrarCursos();
 cargarCursosDesdeLocalStorage();
+

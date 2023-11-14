@@ -1,0 +1,99 @@
+[
+    {
+        "id": 0,
+        "nombre": "Preparación Física infantil",
+        "descripcion": "Curso diseñado para introducir a los niños en la preparación física de manera divertida y segura.",
+        "duracion": "10 semanas",
+        "nivel": "Principiante",
+        "precio": "45usd"
+    },
+    
+    {
+        "id": 1,
+        "nombre": "Entrenamiento Cardiovascular",
+        "descripcion": "Programa de 8 semanas centrado en el desarrollo de la resistencia cardiovascular y la salud del corazón.",
+        "duracion": "8 semanas",
+        "nivel": "Intermedio",
+        "precio": "80usd"
+    },
+    {
+        "id": 2,
+        "nombre": "Fuerza para gente adulta",
+        "descripcion": "Curso diseñado para adultos principiantes que desean desarrollar fuerza física de manera efectiva y segura.",
+        "duracion": "6 semanas",
+        "nivel": "Principiante",
+        "precio": "50usd"
+    },
+    {
+        "id": 3,
+        "nombre": "Funcional para gente adulta",
+        "descripcion": "Programa de 8 semanas enfocado en ejercicios funcionales para mejorar la movilidad y la fuerza en adultos principiantes.",
+        "duracion": "8 semanas",
+        "nivel": "Principiante",
+        "precio": "100usd"
+    },
+    {
+        "id": 4,
+        "nombre": "Preparación Física clásica",
+        "descripcion": "Curso avanzado de 8 semanas que aborda los principios clásicos de la preparación física.",
+        "duracion":"8 semanas",
+        "nivel": "Avanzado",
+        "precio": "100usd"
+    },
+    {
+        "id": 5,
+        "nombre": "Preparación Física 212 lbs",
+        "descripcion": "Programa avanzado de 12 semanas diseñado para aquellos que buscan prepararse para competiciones específicas.",
+        "duracion": "12 semanas",
+        "nivel": "Avanzado",
+        "precio": "100usd"
+    },
+    {
+        "id": 6,
+        "nombre": "Rutina de powerlifting",
+        "descripcion": "Introducción al powerlifting con un enfoque en técnicas y entrenamientos de fuerza.",
+        "duracion": "8 semanas",
+        "nivel": "Principiante",
+        "precio": "100usd"
+    },
+    {
+        "id": 7,
+        "nombre": "Preparación de culturismo",
+        "descripcion": "Programa de 12 semanas diseñado para aquellos que buscan esculpir su cuerpo a través del culturismo.",
+        "duracion": "12 semanas",
+        "nivel": "Avanzado",
+        "precio": "40usd"
+    },
+    {
+        "id": 8,
+        "nombre": "Preparacion para Men's Physique",
+        "descripcion": "Curso avanzado de 12 semanas enfocado en la preparación específica para la categoría Men's Physique en competiciones.",
+        "duracion": "12 semanas",
+        "nivel": "Avanzado",
+        "precio": "90usd"
+    },
+    {
+        "id": 9,
+        "nombre": "Rutina de hipertrofia muscular",
+        "descripcion": "Programa de 6 semanas diseñado para principiantes que buscan desarrollar masa muscular a través de la hipertrofia.",
+        "duracion": "6 semanas",
+        "nivel": "Principiante",
+        "precio": "110usd"
+    },
+    {
+        "id": 10,
+        "nombre": "Funcional para gente adulta",
+        "descripcion": "Versión avanzada del programa funcional para adultos, con una duración de 12 semanas.",
+        "duracion": "12 semanas",
+        "nivel": "Intermedio",
+        "precio": "130usd"
+    },
+    {
+        "id": 11,
+        "nombre": "Preparación Física Adolescentes",
+        "descripcion": "Enfoque en la preparación física adaptada a las necesidades específicas de los adolescentes, promoviendo un estilo de vida saludable.",
+        "duracion": "10 semanas",
+        "nivel": "Intermedio",
+        "precio": "50usd"
+    }
+]

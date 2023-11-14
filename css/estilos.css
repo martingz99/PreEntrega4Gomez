@@ -107,6 +107,16 @@ button:hover{
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 9999px;
-    box-shadow: inset 2px 5px 10px rgb(95, 91, 91);
+    box-shadow: inset 2px 5px 10px rgb(255, 0, 0);
     color: #fff;
+}
+
+.nombre-input {
+    background-color: rgb(131, 61, 61);
+    font-size: 1rem;
+}
+
+.buscar-cursos-input {
+    background-color: #954d4d; 
+    font-size: 1rem;
 }
